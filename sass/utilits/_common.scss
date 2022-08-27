@@ -1,0 +1,53 @@
+.section {
+    padding: 60px 0;
+    @media screen and (min-width: 768px) {
+        padding: 60px 0;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0;
+    }
+}
+
+.section--centred {
+    text-align: center;
+}
+
+.section--with-bottom-padding {
+    padding-bottom: 30px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        padding-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 47px;
+    }
+}
+
+.section--with-top-padding {
+    padding-top: 30px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        padding-top: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 47px;  
+    }
+}
+
+.section--grey {
+    text-align: center;
+    background-color: var(--background-grey-color);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}

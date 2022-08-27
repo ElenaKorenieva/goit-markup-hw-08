@@ -1,0 +1,12 @@
+.section__headling {
+    display: inline-block;
+    margin-bottom: 50px;
+    @include font(28, 700, 1.18);
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        @include font(28, 700, 1.18);
+    }
+    @media screen and (min-width: 1200px) {
+        @include font(36, 700, 1.2);
+    }
+}
