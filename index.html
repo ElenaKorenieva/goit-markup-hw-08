@@ -18,6 +18,45 @@
         <link rel="stylesheet" href="./css/main.min.css" />
     </head>
     <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container header__container">
+                <nav class="main-nav">
+                    <a
+                        href="./index.html"
+                        rel="noopener norefferer"
+                        class="logo decoration"
+                    >
+                        <span class="logo__text">Web</span>Studio
+                    </a>
+                    <button
+                        type="button"
+                        class="menu-button is-open"
+                        aria-expanded="false"
+                        aria-controls="main-nav__menu"
+                        data-menu-button
+                    >
+                        <svg
+                            width="40"
+                            height="40"
+                            aria-label="Перемикач мобільного меню"
+                        >
+                            <use
+                                href="./images/sprite.svg#icon-close_btn"
+                                class="menu-button__cross"
+                            ></use>
+                            <use
+                                href="./images/sprite.svg#icon-menu_btn"
+                                class="menu-button__menu"
+                            ></use>
+                        </svg>
+                    </button>
+                    <div class="main-nav__menu" id="main-nav__menu" data-menu>
+                        Menu fgu
+                    </div>
+                </nav>
+            </div>
+        </header>
         <!-- <header class="header">
             <div class="container header__container">
                 <nav class="main-nav">
@@ -88,6 +127,7 @@
             </div>
         </header> -->
         <main>
+            <!-- Hero section -->
             <section class="section section__hero">
                 <div class="container">
                     <h1 class="hero__headling">
@@ -102,6 +142,7 @@
                     </button>
                 </div>
             </section>
+            <!-- Features section -->
             <section id="features" class="section section--with-bottom-padding">
                 <div class="container">
                     <h2 class="section__headling visually-hidden">
@@ -167,9 +208,10 @@
                     </ul>
                 </div>
             </section>
+            <!-- Specialization section -->
             <section
                 id="specialization"
-                class="section section--with-top-padding"
+                class="section section--with-top-padding section--hidden"
             >
                 <div class="container">
                     <h2 class="section__headling">Чим ми займаємося</h2>
@@ -216,6 +258,7 @@
                     </ul>
                 </div>
             </section>
+            <!-- Our Team section -->
             <section class="section section--grey">
                 <div class="container">
                     <h2 class="section__headling">Наша команда</h2>
@@ -559,6 +602,7 @@
                     </ul>
                 </div>
             </section>
+            <!-- Clients section -->
             <section class="section section--centred">
                 <div class="container">
                     <h2 class="section__headling">Постійні клієнти</h2>
@@ -827,7 +871,7 @@
                 </div>
             </div>
         </footer> -->
-        <!-- <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop is-hidden" data-modal>
             <div class="backdrop__modal">
                 <button class="backdrop__btn" data-modal-close>
                     <svg width="18" height="18" class="backdrop__btn-icon">
@@ -912,7 +956,6 @@
                             placeholder="Введіть текст"
                         ></textarea>
                     </div>
-
                     <div class="backdrop__checkbox-field">
                         <input
                             type="checkbox"
@@ -931,13 +974,116 @@
                             ></label
                         >
                     </div>
-
                     <button type="submit" class="button button__submit">
                         Відправити
                     </button>
                 </form>
             </div>
+        </div>
+
+        <!-- <div class="backdrop is-hidden" data-modal>
+            <div class="backdrop__modal">
+                <button type="button" class="close-modal" data-modal-close>
+                    <svg width="18px" height="18px" class="icon">
+                        <use
+                            href="./images/svg/sprite/sprite.svg#icon-close-modal"
+                        ></use>
+                    </svg>
+                </button>
+                <form autocomplete="off">
+                    <h2 class="backdrop__title">
+                        Оставьте свои данные, мы вам перезвоним
+                    </h2>
+
+                    <div class="backdrop__form-field">
+                        <input
+                            type=" text"
+                            name="user-name"
+                            id="user-name"
+                            placeholder=" "
+                            class="backdrop__input"
+                        />
+                        <label for="user-name" class="backdrop__label"
+                            >Имя</label
+                        >
+                        <svg width="18px" height="18px" class="icon">
+                            <use
+                                href="./images/svg/sprite/sprite.svg#icon-person-modal"
+                            ></use>
+                        </svg>
+                    </div>
+
+                    <div class="backdrop__form-field">
+                        <input
+                            type="tel"
+                            name="user-phone"
+                            id="user-phone"
+                            placeholder=" "
+                            class="backdrop__input"
+                        />
+                        <label for="user-phone" class="backdrop__label"
+                            >Телефон</label
+                        >
+                        <svg width="18px" height="18px" class="icon">
+                            <use
+                                href="./images/svg/sprite/sprite.svg#icon-phone-modal"
+                            ></use>
+                        </svg>
+                    </div>
+
+                    <div class="backdrop__form-field">
+                        <input
+                            type="email"
+                            name="user-email"
+                            id="user-email"
+                            placeholder=" "
+                            class="backdrop__input"
+                        />
+                        <label for="user-email" class="backdrop__label"
+                            >Почта</label
+                        >
+                        <svg width="18px" height="18px" class="icon">
+                            <use
+                                href="./images/svg/sprite/sprite.svg#icon-email-modal"
+                            ></use>
+                        </svg>
+                    </div>
+
+                    <div class="backdrop__form-field">
+                        <textarea
+                            name="comment"
+                            id="comment-box"
+                            cols="30 "
+                            rows="10"
+                            placeholder="Введите текст"
+                            class="backdrop__form-textarea"
+                        ></textarea>
+                        <label for="comment-box" class="comment-input-label"
+                            >Комментарий</label
+                        >
+                    </div>
+
+                    <div class="agreement-wrapper">
+                        <label class="checkbox-label">
+                            <input
+                                class="checkbox visually-hidden"
+                                type="checkbox"
+                                name="agree"
+                                value="agree"
+                            />
+                            <span class="checkbox-icon"></span>
+                            <span class="label-text"
+                                >Соглашаюсь с рассылкой и принимаю
+                            </span>
+                        </label>
+                        <a href=" " class="agreement-link">Условия договора</a>
+                    </div>
+
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
         </div> -->
-        <!-- <script src="./js/modal.js"></script> -->
+        <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>
