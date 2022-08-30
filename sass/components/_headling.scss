@@ -3,10 +3,10 @@
     margin-bottom: 50px;
     @include font(28, 700, 1.18);
     text-align: center;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         @include font(28, 700, 1.18);
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         @include font(36, 700, 1.2);
     }
 }

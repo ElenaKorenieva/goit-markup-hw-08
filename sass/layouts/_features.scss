@@ -9,10 +9,10 @@
 
 .grid__item {
     flex-basis: 100%;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         flex-basis: calc((100% - 30px) / 2);
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         flex-basis: calc((100% - 3*30px) / 4);
     }
 }
@@ -24,7 +24,7 @@
     color: var(--title-text-color);
     @include font(14, 700, 1.14);
     text-transform: uppercase;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         text-align: left;
     }
 }

@@ -1,18 +1,45 @@
 .footer {
-    display: flex;
-    padding: 60px 0;
+    padding: 60px;
     background-color: var(--background-dark-color);
 }
 
 .footer-wrapper {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+.footer__thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $tablet) {
+        margin-right: 165px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-right: 0;
+        align-items: flex-start;
+    }
 }
 
 .footer__address {
-    width: 231px;
+    min-width: 232px;
     margin-top: 20px;
+    text-align: center;
     color: var(--secondary-text-color);
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 .footer__list {
@@ -21,7 +48,7 @@
 }
 
 .footer__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .footer__item {
@@ -51,10 +78,14 @@
 }
 
 .join-us {
-    width: 206px;
-    margin-left: 70px;
-    text-align: start;
+    min-width: 206px;
+    margin-top: 60px;
+    // margin-left: 70px;
+    text-align: center;
     color: var(--primary-white-color);
+    @media screen and (min-width: $desktop) {
+        margin-left: 70px;
+    }
 }
 
 .join-us__headling,
@@ -62,24 +93,52 @@
     margin-bottom: 20px;
     @include font(14, 700, 1.14);
     text-transform: uppercase;
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 .subscribe {
+    width: 100%;
     /* width: 570px; */
-    margin-left: 93px;
-    text-align: start;
+    // margin-left: 93px;
+    margin-top: 60px;
+    text-align: center;
     color: var(--primary-white-color);
+    @media screen and (min-width: $desktop) {
+        margin-left: 93px;
+    }
 }
 
 .subscribe__form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     position: relative;
+    @media screen and (min-width: $desktop) {
+        flex-direction: row;
+        gap: 12px;
+    }
+}
+
+.subscribe__field {
+    width: 100%;
+    @media screen and (min-width: $mobile) {
+        max-width: 450px;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+    }
 }
 
 .subscribe__input {
-    display: inline-flex;
-    width: 358px;
-    height: 50px;
+    // display: inline-flex;
+    width: 100%;
+    min-height: 50px;
     margin: 0;
     padding-left: 16px; 
     background-color: transparent;
@@ -88,19 +147,35 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    @media screen and (min-width: $tablet {
+        display: inline-flex;
+        // min-width: 450px;
+    }
+    @media screen and (min-width: $desktop) {
+        display: inline-flex;
+        // min-width: 358px;
+    }
 }
 
 
 .button__icon {
     display: block;
     position: absolute;
-    top: 25%;
-    right: 5%;
+    top: 71%;
+    right: 31%;
     fill: var(--primary-white-color);
     transition: fill 250ms var(--timing-function);
     .button__subscribe:hover + &,
     .button__subscribe:focus + & {
     fill: var(--primary-black-color);
+    }
+    @media screen and (min-width: $tablet) {
+        top: 69%;
+        right: 39%;
+    }
+    @media screen and (min-width: $desktop) {
+        top: 30%;
+        right: 6%;
     }
 }
 

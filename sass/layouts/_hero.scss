@@ -7,22 +7,36 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--background-dark-color);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--primary-white-color);
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         max-width: 1200px;
         height: 400px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         max-width: 1600px;
         height: 600px;
     }
+    background-image: var(--bg-gradient), url(../images/mob/studio/header-mob.jpg);
+    background-color: var(--background-dark-color);
+    @include retina {
+        background-image: var(--bg-gradient), url(../images/mob/studio/header-mob@2x.jpg);
+    }
+    @media screen and (min-width: $tablet) {
+        background-image: var(--bg-gradient), url(../images/tablet/studio/header-tablet.jpg);
+        @include retina {
+        background-image: var(--bg-gradient), url(../images/tablet/studio/header-tablet@2x.jpg);
+        }
+    }
+    @media screen and (min-width: $desktop) {
+        background-image: var(--bg-gradient), url(../images/desktop/studio/header-desktop.jpg);
+        @include retina {
+        background-image: var(--bg-gradient), url(../images/desktop/studio/header-desktop@2x.jpg);
+        }
+    }
 }
-
 
 .hero__headling {
     max-width: 360px;
@@ -30,7 +44,7 @@
     margin-bottom: 30px;
     @include font(26, 900, 1.62, 0.06);
     text-transform: uppercase;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         max-width: 696px;
         @include font(44, 900, 1.36, 0.06); 
     }

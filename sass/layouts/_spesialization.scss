@@ -1,6 +1,6 @@
 .section--hidden {
     display: block;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $tablet) {
         display: none;
     }
 }
@@ -13,7 +13,6 @@
 
 .gallery__item {
     flex-basis: calc((100% - 60px) / 3);
-    height: 100%; 
 }
 
 .gallery__thumb {

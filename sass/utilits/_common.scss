@@ -1,9 +1,9 @@
 .section {
     padding: 60px 0;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         padding: 60px 0;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         padding: 94px 0;
     }
 }
@@ -12,18 +12,18 @@
     text-align: center;
 }
 
-.section--with-bottom-padding {
+.section--half-bottom {
     padding-bottom: 60px;
     text-align: center;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         padding-bottom: 47px;
     }
 }
 
-.section--with-top-padding {
+.section--half-top {
     padding-top: 60px;
     text-align: center;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         padding-top: 47px;  
     }
 }
@@ -44,4 +44,10 @@
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
