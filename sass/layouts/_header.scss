@@ -164,6 +164,7 @@
     padding: 10px 25px 48px;
     box-sizing: border-box;
     z-index: 9;
+    // Add container for mobile menu
     & > .mob-container {
         height: calc(100% - 50px);
         box-sizing: border-box;
