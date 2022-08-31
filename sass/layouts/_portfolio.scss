@@ -62,17 +62,22 @@
     position: absolute;
     display: inline-block;
     height: 100%;
-    padding: 63px 24px;
+    padding: 53px 20px;
     bottom: 0;
     left: 0;
-    @include font(18, 400, 1.56);
+    @include font(16, 400, 1.56);
     background-color: rgba(33, 150, 243, 0.9);
     color: var(--primary-white-color);
-    transform: translateY(101%);
+    transform: translateY(100%);
     transition: transform 250ms var(--timing-function);
     .portfolio-list__link:hover &,
     .portfolio-list__link:focus & {
     transform: translateY(0);
+    }
+    @media screen and (min-width: $mobile) {
+        padding: 63px 24px;
+        @include font(18, 400, 1.56);
+        transform: translateY(101%);
     }
 }
 

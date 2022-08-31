@@ -66,7 +66,7 @@
         height: 4px;
         position: absolute;
         left: 0;
-        bottom: -1px;
+        bottom: -2px;
         border-radius: 2px;
         background-color: var(--accent-color);
     }
@@ -162,6 +162,8 @@
     width: 100vw;
     height: 100vh;
     padding: 10px 25px 48px;
+    box-sizing: border-box;
+    z-index: 9;
     & > .container {
         height: 100%;
         display: flex;
@@ -186,6 +188,11 @@
     transition: fill 250ms var(--timing-function);
 }
 
+.mob-container {
+    height: calc(100% - 50px);
+    box-sizing: border-box;
+}
+
 .mob-menu-list {
     margin-bottom: 64px;
 }
@@ -202,13 +209,19 @@
 .mob-connect-tel {
     display: block;
     margin-bottom: 32px;
-    @include font(34, 500, 1.71, 0.1);
+    @include font(24, 500, 1.71, 0.1);
     color: var(--accent-color);
+    @media  (min-width: $mobile) {
+        @include font(34, 500, 1.71, 0.1);
+    }
 }
 
 .mob-connect-mail {
-    @include font(24, 500, 1.17, 0.1);
+    @include font(18, 500, 1.17, 0.1);
     color: var(--primary-text-color);
+    @media  (min-width: $mobile) {
+        @include font(24, 500, 1.17, 0.1);
+    }
 }
 
 .mob-connect {
@@ -239,6 +252,9 @@
 }
 
 .mob-soc-link {
-    @include font(18, 500, 1.22, 0.1);
+    @include font(14, 500, 1.22, 0.1);
     color: var(--accent-color);
+    @media  (min-width: $mobile) {
+        @include font(18, 500, 1.22, 0.1);
+    }
 }
