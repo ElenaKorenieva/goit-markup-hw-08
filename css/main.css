@@ -287,8 +287,9 @@ img {
   box-sizing: border-box;
   z-index: 9;
 }
-.mob-menu > .container {
-  height: 100%;
+.mob-menu > .mob-container {
+  height: calc(100% - 50px);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -307,11 +308,6 @@ img {
 
 .menu-button__menu {
   transition: fill 250ms var(--timing-function);
-}
-
-.mob-container {
-  height: calc(100% - 50px);
-  box-sizing: border-box;
 }
 
 .mob-menu-list {

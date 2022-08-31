@@ -164,8 +164,9 @@
     padding: 10px 25px 48px;
     box-sizing: border-box;
     z-index: 9;
-    & > .container {
-        height: 100%;
+    & > .mob-container {
+        height: calc(100% - 50px);
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -186,12 +187,6 @@
 
 .menu-button__menu {
     transition: fill 250ms var(--timing-function);
-}
-
-// Add height according to mentor's comment
-.mob-container {
-    height: calc(100% - 50px);
-    box-sizing: border-box;
 }
 
 .mob-menu-list {
